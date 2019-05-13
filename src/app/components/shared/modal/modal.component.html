@@ -1,0 +1,28 @@
+<div class="modal" id="modalSquare">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Cuadrados Perfectos de {{rangeSquare.numberOne}} a {{rangeSquare.numberTwo}}</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <ul *ngIf="arraySquare.length > 0">
+                    <li *ngFor="let square of arraySquare">
+                        <p>([{{square.numberIndex}}] => {{square.sumSquare}} )</p>
+                    </li>
+                </ul>
+                <h4 *ngIf="arraySquare.length == 0">Lo sentimos el rango no posee cuadrados perfectos</h4>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
